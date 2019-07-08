@@ -26,5 +26,5 @@ RUN tar xvf ${TOOLCHAIN_FILE} --skip-old-files
 RUN export PATH="$PATH:$PWD/${TOOLCHAIN_FOLDER}/bin"
 
 #testa o compilador
-RUN ${CC} -v
+RUN echo $PATH
 
