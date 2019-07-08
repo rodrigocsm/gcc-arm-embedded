@@ -17,10 +17,10 @@ ENV TOOLCHAIN_DOWNLOAD_URL https://developer.arm.com/-/media/Files/downloads/gnu
 ENV TOOLCHAIN_FOLDER ${TOOLCHAIN_NAME}-${TOOLCHAIN_YEAR}-${TOOLCHAIN_QUARTER}-${TOOLCHAIN_REVISION}
 
 #Faz download
-RUN wget -nc TOOLCHAIN_DOWNLOAD_URL
+RUN wget -nc ${TOOLCHAIN_DOWNLOAD_URL}
 
 #Descompacta
-RUN tar xvf TOOLCHAIN_FILE --skip-old-files
+RUN tar xvf ${TOOLCHAIN_FILE} --skip-old-files
 
 #Adiciona o caminho do compilador ao PATH
 RUN echo "$PWD"
